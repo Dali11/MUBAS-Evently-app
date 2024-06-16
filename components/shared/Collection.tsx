@@ -7,7 +7,7 @@ type CollectionProps = {
      data: IEvent[],
      emptyTitle: string,
      emptyStateSubtext: string,
-     collectionType?: 'Event_organized' | 'My Ticket' | 'All_Events',
+     collectionType?: 'EventOrganized' | 'MyTickets' | 'All_Events',
      limit: number,
      page: number | string,
      totalPages?: number,
@@ -30,11 +30,11 @@ function Collection({
           <div className='flex flex-col items-center gap-10'>
                <ul className='grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10'>
                     {data.map((event) => {
-                         const hasOrderLink = collectionType === 'Events_Organized';
-                         const hidePrice = collectionType === 'My_Tickets';
+                         const hasOrderLink = collectionType === 'EventOrganized';
+                         const hidePrice = collectionType === 'MyTickets';
 
                          return (
-                              <li key={event._id} className='flex justify-center'>
+                              <li key={`${event._id}-card`} className='flex justify-center'>
                                    <Card event={event} hasOrderLink={hasOrderLink} hidePrice={hidePrice}/>
                               </li>
                          )
@@ -42,7 +42,7 @@ function Collection({
                </ul>
 
                { totalPages > 1 && (
-                    <Pagination urlParamName={urlParamName} page={page} totalPages={totalPages} />
+                    <Pagination urlParamName={urlParamName || ""} page={page} totalPages={totalPages} />
                )}
           </div>
      ): (

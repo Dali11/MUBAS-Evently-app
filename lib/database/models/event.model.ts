@@ -3,16 +3,16 @@ import mongoose, { model, models, Schema } from "mongoose";
 
 export interface IEvent extends Document {
   _id: String;
-  title: string;
-  description?: string;
-  location: string;
+  title: String;
+  description?: String;
+  location: String;
   createdAt: Date; // Changed property name from 'createdArt' to follow naming conventions
-  imageUrl: string;
+  imageUrl: String;
   startDateTime: Date;
   endDateTime: Date;
-  price?: string;
+  price?: String;
   isFree: boolean | undefined;
-  url?: string;
+  url?: String;
   category: { _id: String, name: String }; // Reference to Category model
   organizer: { _id: String, firstName: String, lastName: String }; // Reference to User model
 }

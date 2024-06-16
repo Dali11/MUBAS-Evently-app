@@ -47,7 +47,7 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
   }
 }
 
-/* export async function deleteUser(clerkId: string) {
+export async function deleteUser(clerkId: string) {
   try {
     await connectToDatabase()
 
@@ -78,4 +78,4 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
   } catch (error) {
     handleError(error)
   }
-} */
+}
