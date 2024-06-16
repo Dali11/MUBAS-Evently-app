@@ -11,7 +11,7 @@ export interface IEvent extends Document {
   startDateTime: Date;
   endDateTime: Date;
   price?: string;
-  isFree: boolean;
+  isFree: boolean | undefined;
   url?: string;
   category: { _id: String, name: String }; // Reference to Category model
   organizer: { _id: String, firstName: String, lastName: String }; // Reference to User model

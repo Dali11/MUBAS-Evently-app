@@ -10,13 +10,14 @@ function Header() {
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
-        <Link href="/" className="w-36">
+        <Link href="/" className="w-40 flex font-bold">
           <Image
-            src="/assets/images/logo.svg"
+            src="/assets/images/MUBAS Logo.png"
             width={128}
             height={38}
             alt="Evently Logo"
           />
+          <h4 className="pt-1 ">MUBAS <span className="text-primary-500 ml-4">EVENTLY</span></h4>
         </Link>
 
         <SignedIn>

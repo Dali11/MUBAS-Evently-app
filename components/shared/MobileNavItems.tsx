@@ -26,7 +26,7 @@ function MobileNavItems() {
         </SheetTrigger>
         <SheetContent className="flex flex-col gap-6 bg-white md:hidden">
           <Image 
-               src='/assets/images/logo.svg'
+               src='/assets/images/MUBAS Logo.png'
                width={35}
                height={35}
                alt="logo"

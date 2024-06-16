@@ -10,4 +10,6 @@ const categorySchema = new Schema({
      name: { type: String, required: true, unique: true}
 })
 
-const category = models.category || model('category', categorySchema)
+const Category = models.category || model('category', categorySchema)
+
+export default Category;

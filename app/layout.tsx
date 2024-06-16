@@ -11,10 +11,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Evently",
+  title: "MUBAS Evently",
   description: "Evently is for event purpose",
   icons: {
-    icon: '/assets/images/logo.svg'
+    icon: '/assets/images/MUBAS Logo.png'
   }
 };
 

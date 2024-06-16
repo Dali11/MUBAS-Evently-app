@@ -27,7 +27,7 @@ export type CreateUserParams = {
        endDateTime: Date
        categoryId: string
        price: string
-       isFree: boolean
+       isFree: boolean | undefined
        url: string
      }
      path: string
@@ -45,7 +45,7 @@ export type CreateUserParams = {
        endDateTime: Date
        categoryId: string
        price: string
-       isFree: boolean
+       isFree: boolean | undefined
        url: string
      }
      path: string
@@ -81,7 +81,7 @@ export type CreateUserParams = {
      title: string
      description: string
      price: string
-     isFree: boolean
+     isFree: boolean | undefined
      imageUrl: string
      location: string
      startDateTime: Date
@@ -108,7 +108,7 @@ export type CreateUserParams = {
      eventTitle: string
      eventId: string
      price: string
-     isFree: boolean
+     isFree: boolean | undefined
      buyerId: string
    }
    

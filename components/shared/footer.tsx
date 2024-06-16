@@ -6,15 +6,18 @@ function Footer() {
   return (
     <footer className='border-t'>
       <div className='wrapper flex-center flex-between flex flex-col sm:flex-row gap-4 p-5 text-center'>
+        <div className="flex font-bold">
         <Link href='/'>
           <Image 
-            src='/assets/images/logo.svg'
+            src='/assets/images/MUBAS Logo.png'
             alt='logo'
             width={128}
             height={38}
           />
         </Link>
-        <p>2023 Eventy. All Rights Reserved.</p>
+        <h4 className='pt-4 flex flex-col'>MUBAS <span className="text-primary-500">EVENTLY</span></h4>
+        </div>
+        <p>2024 Eventy. All Rights Reserved.</p>
       </div>
     </footer>
   )
