@@ -2,19 +2,19 @@ import { Document } from "mongodb";
 import mongoose, { model, models, Schema } from "mongoose";
 
 export interface IEvent extends Document {
-  _id: String;
-  title: String;
-  description?: String;
-  location: String;
+  _id: string;
+  title: string;
+  description?: string;
+  location: string;
   createdAt: Date; // Changed property name from 'createdArt' to follow naming conventions
-  imageUrl: String;
+  imageUrl: string;
   startDateTime: Date;
   endDateTime: Date;
-  price?: String;
-  isFree: boolean | undefined;
-  url?: String;
-  category: { _id: String, name: String }; // Reference to Category model
-  organizer: { _id: String, firstName: String, lastName: String }; // Reference to User model
+  price?: string;
+  isFree: boolean;
+  url?: string;
+  category: { _id: string, name: string }; // Reference to Category model
+  organizer: { _id: string, firstName: string, lastName: string }; // Reference to User model
 }
 
 const EventSchema = new Schema({

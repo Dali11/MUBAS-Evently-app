@@ -33,12 +33,13 @@ type EventFormProps = {
 const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   const [files, setFiles] = useState<File[]>([])
   const initialValues = event && type === 'Update' 
-    ? { ...event, startDateTime: new Date(event.startDateTime),
-      endDateTime: new Date(event.endDateTime)
-    } 
+    ? { 
+      ...event, 
+      startDateTime: new Date(event.startDateTime), 
+      endDateTime: new Date(event.endDateTime) 
+    }
     : eventDefaultValues;
-
-  const router = useRouter()
+  const router = useRouter();
 
   const { startUpload } = useUploadThing('imageUploader')
 
@@ -48,8 +49,6 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   })
  
   async function onSubmit(values: z.infer<typeof eventFormSchema>) {
-    // const eventData = values;
-    
     let uploadedImageUrl = values.imageUrl;
 
     if(files.length > 0) {
@@ -69,6 +68,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
           userId,
           path: '/profile'
         })
+
         if(newEvent) {
           form.reset();
           router.push(`/events/${newEvent._id}`)
@@ -99,9 +99,8 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
         console.log(error);
       }
     }
-     
   }
- 
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5">
@@ -333,4 +332,4 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   )
 }
 
-export default EventForm;
+export default EventForm
