@@ -17,7 +17,7 @@ function Footer() {
         </Link>
         <h4 className='pt-4 flex flex-col'>MUBAS <span className="text-primary-500">EVENTLY</span></h4>
         </div>
-        <p>2024 Eventy. All Rights Reserved.</p>
+        <p>2024 MUBAS Eventy. All Rights Reserved.</p>
       </div>
     </footer>
   )
