@@ -19,6 +19,9 @@ function Card({event, hasOrderLink, hidePrice }: CardProps) {
 
      const isEventCreator = userId === event.organizer._id.toString();
 
+     console.log("First Name:", event.organizer.firstName);
+     console.log("Last Name:", event.organizer.lastName);
+
 
   return (
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
@@ -60,7 +63,7 @@ function Card({event, hasOrderLink, hidePrice }: CardProps) {
           </Link>
           <div className="flex-between w-full">
                <p className='p-medium-14 md:p-medium-16 text-grey-600'>
-                    {event.organizer.lastName}
+                    {event.organizer.firstName} {event.organizer.lastName}
                </p>
 
                {hasOrderLink && (
