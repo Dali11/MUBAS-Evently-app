@@ -27,7 +27,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 wrapper">
           <div className="flex flex-col gap-8 justify-center">
             <h1 className="h1-bold">
-              Host, Connect, Celebrate: Over +<SetCounter targetValue={3200} />{" "}
+              Host, Connect, Celebrate: Over {" "} +<SetCounter targetValue={3200} />{" "}
               students!
             </h1>
             <p className="p-regular-20 md:p-regular-24">

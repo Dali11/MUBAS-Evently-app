@@ -17,7 +17,7 @@ function Header() {
             height={38}
             alt="Evently Logo"
           />
-          <h4 className="pt-1 ">MUBAS <span className="text-primary-500 ml-4">EVENTLY</span></h4>
+          <h4 className="pt-1"><span className="text-primary-500">MUBAS</span> <span className="text-sm">EVENTLY</span></h4>
         </Link>
 
         <SignedIn>

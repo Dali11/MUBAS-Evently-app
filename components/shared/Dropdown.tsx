@@ -63,7 +63,7 @@ import {
    
            <AlertDialog>
              <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">Add new category</AlertDialogTrigger>
-             <AlertDialogContent className="bg-white">
+             <AlertDialogContent className="bg-white w-[90vw] max-h-[70vh] p-6 overflow-y-auto">
                <AlertDialogHeader>
                  <AlertDialogTitle>New Category</AlertDialogTitle>
                  <AlertDialogDescription>
