@@ -19,8 +19,8 @@ function Card({event, hasOrderLink, hidePrice }: CardProps) {
 
      const isEventCreator = userId === event.organizer._id.toString();
 
-     console.log("First Name:", event.organizer.firstName);
-     console.log("Last Name:", event.organizer.lastName);
+     // console.log("First Name:", event.organizer.firstName);
+     // console.log("Last Name:", event.organizer.lastName);
 
 
   return (

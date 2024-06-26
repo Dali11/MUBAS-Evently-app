@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "paychangu",
+      "source": "@paychangu/v1.0#a5x31gjlxgkjaq4",
+      "integrity": "sha512-6TftEEOmWY4faU9tubWSMFabplfzVcooCEUpGxIKloX9MJ6OxcR+GkwfbbyvUt67CuVjLE8xGMdqWI4VHTILhw==",
+      "installerVersion": "6.1.1"
+    }
+  ]
+}

@@ -26,3 +26,25 @@ export const getAllCategories = async () => {
           handleError(error)
      }
 }
+
+export const addCategoryIfNotExists = async () => {
+     try {
+          await connectToDatabase();
+          const checkExist = await Category.find({Category})
+          return !!checkExist
+     } catch (error) {
+          handleError(error)
+     }
+}
+
+export const deleteCategory = async (props: { id: string }) => {
+     const { id } = props
+
+     try {
+          await connectToDatabase();
+          const  catedgoryDeleted = await Category.deleteOne({ _id: id }).exec()
+          return JSON.parse(JSON.stringify(catedgoryDeleted))
+     } catch (error) {
+          handleError(error)
+     }
+}

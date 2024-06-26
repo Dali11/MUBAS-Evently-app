@@ -1,0 +1,154 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PAYCHANGU INTEGRATION OPTIONS",
+    "version": "unknown"
+  },
+  "servers": [
+    {
+      "url": "https://api.paychangu.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "x-default": "",
+        "x-bearer-format": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "paths": {
+    "/payment": {
+      "post": {
+        "summary": "API Reference",
+        "description": "",
+        "operationId": "level-reference",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "amount",
+                  "currency",
+                  "email",
+                  "first_name",
+                  "last_name",
+                  "callback_url",
+                  "return_url",
+                  "tx_ref"
+                ],
+                "properties": {
+                  "amount": {
+                    "type": "string",
+                    "description": "Amount to charge the customer."
+                  },
+                  "currency": {
+                    "type": "string",
+                    "description": "Currency to charge in. [ 'MWK', 'NGN', 'ZAR', 'GBP', 'USD', 'ZMW' ]",
+                    "default": "MWK"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "This is the email address of your customer. Transaction notification will be sent to this email address"
+                  },
+                  "first_name": {
+                    "type": "string",
+                    "description": "This is the first_name of your customer."
+                  },
+                  "last_name": {
+                    "type": "string",
+                    "description": "This is the last_name of your customer."
+                  },
+                  "callback_url": {
+                    "type": "string",
+                    "description": "This is your IPN url, it is important for receiving payment notification. Successful transactions redirects to this url after payment. {tx_ref} is returned, so you don't need to pass it with your url"
+                  },
+                  "return_url": {
+                    "type": "string",
+                    "description": "URL to redirect to when a transaction is completed. This is useful for 3DSecure payments so we can redirect your customer back to a custom page you want to show them."
+                  },
+                  "tx_ref": {
+                    "type": "string",
+                    "description": "Your transaction reference. This MUST be unique for every transaction."
+                  },
+                  "meta": {
+                    "type": "string",
+                    "description": "You can pass extra information here."
+                  },
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "customization": {
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "default": "Title of payment"
+                      },
+                      "description": {
+                        "type": "string",
+                        "default": "Payment description"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description"
+                    ],
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "x-readme": {
+    "headers": []
+  },
+  "x-readme-fauxas": true
+}

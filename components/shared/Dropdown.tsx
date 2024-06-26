@@ -29,13 +29,36 @@ type DropdownProps = {
 const CategoriesDropdown = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICantegory[]>([])
   const [newCategory, setNewCategory] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+  const [isAdding, setIsAdding] = useState(false)
 
-  const handleAddCategory = () => {
-    createCategory({
-      categoryName: newCategory.trim(),
-    }).then((category) => {
-      setCategories((prevState) => [...prevState, category])
-    })
+  const handleAddCategory = async () => {
+    setErrorMessage("")
+
+    try {
+      const trimmedCategory = newCategory.trim();
+      if (!trimmedCategory) {
+        setErrorMessage("Category name cannot be empty.");
+        return;
+      }
+
+      const existingCategory = categories.find(
+        (cat) => cat.name.toLowerCase() === trimmedCategory.toLowerCase()
+      );
+      if (existingCategory) {
+        setErrorMessage(`"${newCategory}" already exist`);
+        return;
+      } /*  */
+
+      const category = await createCategory({ categoryName: trimmedCategory });
+      setCategories((prevState) => [...prevState, category]);
+      setNewCategory(""); // Clear input after successful creation
+    } catch (error) {
+      console.error("Error creating category:", error);
+      setErrorMessage("An error occurred. Please try again.");
+    } finally {
+      setIsAdding(false); // Reset adding state
+    }
   }
 
   useEffect(() => {
@@ -47,6 +70,8 @@ const CategoriesDropdown = ({ value, onChangeHandler }: DropdownProps) => {
 
     getCategories()
   }, [])
+
+   
 
   return (
     <div>
@@ -69,8 +94,9 @@ const CategoriesDropdown = ({ value, onChangeHandler }: DropdownProps) => {
       </Select>
 
       <AlertDialog>
-        <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">
-          Add new category
+        <AlertDialogTrigger className="p-medium-14 flex flex-col w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 hover:rounded-full focus:text-primary-500">
+        {isAdding ? "Adding..." : "Add new category"} 
+        {errorMessage && <div className="text-red-500">{errorMessage}</div>}
         </AlertDialogTrigger>
         <AlertDialogContent className="bg-white w-[90vw] max-h-[70vh] p-6 overflow-y-auto">
           <AlertDialogHeader>
@@ -96,4 +122,4 @@ const CategoriesDropdown = ({ value, onChangeHandler }: DropdownProps) => {
   )
 }
 
-export default CategoriesDropdown
+export default CategoriesDropdown;

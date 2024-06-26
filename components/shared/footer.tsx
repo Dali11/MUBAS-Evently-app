@@ -19,6 +19,7 @@ function Footer() {
         </div>
         <p>2024 MUBAS Eventy. All Rights Reserved.</p>
       </div>
+
     </footer>
   )
 }

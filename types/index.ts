@@ -103,7 +103,7 @@ export type CreateUserParams = {
      categoryName: string
    }
    
-   // ====== ORDER PARAMS
+   // ====== ORDER PARAMS 
    export type CheckoutOrderParams = {
      eventTitle: string
      eventId: string
