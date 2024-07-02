@@ -19,6 +19,27 @@ module.exports = withUt({
     },
     extend: {
       colors: {
+        dark: {
+          1: '#1C1F2E',
+          2: '#161925'
+        },
+        blue: {
+          1: '#0E78F9'
+        },
+        sky: {
+          1: '#C9DDFF',
+          2: '#ECF0FF',
+          3: '#F5FCFF',
+        },
+        orange: {
+          1: '#FF742E',
+        },
+        purple: {
+          1: '#830EF9',
+        },
+        yellow: {
+          1: '#F9A90E',
+        },
         primary: {
           500: '#624CF5',
           50: ' #F6F8FD',
@@ -75,6 +96,7 @@ module.exports = withUt({
       backgroundImage: {
         'dotted-pattern': "url('/assets/images/dotted-pattern.png')",
         'hero-img': "url('/assets/images/hero.png')",
+        hero: "url('/assets/images/hero-background.png')",
       },
       borderRadius: {
         lg: 'var(--radius)',

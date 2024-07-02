@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const SetCounter = ({ targetValue }) => {
-  const [currentValue, setCurrentValue] = useState(1034);
+  const [currentValue, setCurrentValue] = useState(7034);
   const countUpRef = useRef(null);
 
   useEffect(() => {
@@ -12,9 +12,9 @@ const SetCounter = ({ targetValue }) => {
         if (prevValue >= targetValue) {
           return 0;
         }
-        return prevValue + 5;
+        return prevValue + 1;
       });
-    }, 1); // Adjust the interval duration as needed
+    }, 400); // Adjust the interval duration as needed
 
     return () => clearInterval(interval);
   }, [targetValue]);

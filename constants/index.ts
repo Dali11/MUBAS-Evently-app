@@ -26,3 +26,33 @@ export const eventDefaultValues = {
      url: ''
 
 }
+
+/* ZOOM MEETING */
+
+export const SidebarLinks = [
+     {
+       label: "Home",
+       route: "/zoom-meeting",
+       imgUrl: "/assets/icons/Home.svg",
+     },
+     {
+       label: "Upcoming",
+       route: "/zoom-meeting/upcoming",
+       imgUrl: "/assets/icons/upcoming.svg",
+     },
+     {
+       label: "Previous",
+       route: "/zoom-meeting/previous",
+       imgUrl: "/assets/icons/previous.svg",
+     },
+     {
+       label: "Recordings",
+       route: "/zoom-meeting/recordings",
+       imgUrl: "/assets/icons/Video.svg",
+     },
+     {
+       label: "Personal Room",
+       route: "/zoom-meeting/personal-room",
+       imgUrl: "/assets/icons/add-personal.svg",
+     },
+   ];
