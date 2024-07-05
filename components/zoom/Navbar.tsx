@@ -11,8 +11,8 @@ const Navbar = () => {
         <Image 
           src='/assets/images/MUBAS Logo.png'
           alt='logo'
-          width={64}
-          height={64}
+          width={74}
+          height={74}
           className='max-sm:size-30 h-14 w-24'
         />
 

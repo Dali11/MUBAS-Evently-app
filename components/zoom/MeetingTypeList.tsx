@@ -97,7 +97,7 @@ const MeetingTypeList = () => {
       img='/assets/icons/recordings.svg'
       title= "Recordings"
       description= "Check out your recordings"
-      handleClick={() => router.push('/recordings')}
+      handleClick={() => router.push('/zoom-meeting/recordings')}
       className="bg-purple-1"
      />
      

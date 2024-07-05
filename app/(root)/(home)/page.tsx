@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
               students!
             </h1>
             <p className="p-regular-20 md:p-regular-24">
-              Join over +3,168 students in our MUBAS community. Let's create, innovate, and grow together as one
+              Join over +7,168 students in our MUBAS community. Let's create, innovate, and grow together as one
               unified community.
             </p>
             <Button size="lg" className=" button w-full sm:w-fit">

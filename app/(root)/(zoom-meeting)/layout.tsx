@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <StreamVideoProvider>
-      <main className={`${inter.className} bg-dark-2`}>
+      <main className={`${inter.className} bg-main-cover bg-[length:1200px_900px] bg-no-repeat md:bg-cover bg-fixed`}>
         {children}
         <Toaster />
       </main>

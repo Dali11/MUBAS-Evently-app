@@ -56,3 +56,11 @@ export const SidebarLinks = [
        imgUrl: "/assets/icons/add-personal.svg",
      },
    ];
+
+   export const avatarImages = [
+    '/assets/images/avatar-1.jpeg',
+    '/assets/images/avatar-2.jpeg',
+    '/assets/images/avatar-3.png',
+    '/assets/images/avatar-4.png',
+    '/assets/images/avatar-5.png',
+  ];
